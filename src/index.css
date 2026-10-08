@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@theme {
+  --font-secondary: "Poppins", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --font-main: "Paytone One", sans-serif;
+  --color-colorprimary: "#101e6d";
+  --color-secondary: "#c5d51a";
+  
+}
+.collage {
+  position: relative;
+  width: 100%;
+
+  height: clamp(420px, 55vw, 680px);
+}
+
+.polaroid {
+  position: absolute;
+  background: #fff;
+  padding: 12px 12px 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .collage {
+    position: static;
+    height: auto;
+    display: block;
+    padding: 8px 0 40vh; /* trailing space so the last card can un-stick */
+  }
+
+  .polaroid {
+    position: sticky !important;
+    top: 96px !important; /* all cards stick at this same offset */
+    left: 0 !important;
+    width: clamp(240px, 80vw, 340px) !important;
+    margin: 0 auto 40vh; /* scroll distance before the next card arrives */
+  }
+}

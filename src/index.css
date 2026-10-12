@@ -1,14 +1,54 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Paytone One";
+  src: url("./assets/fonts/Paytone_One/PaytoneOne-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+
 @theme {
-  --font-secondary: "Poppins", sans-serif;
   --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
   --font-main: "Paytone One", sans-serif;
   --color-colorprimary: "#101e6d";
   --color-secondary: "#c5d51a";
-  
 }
+
 .collage {
   position: relative;
   width: 100%;
@@ -36,14 +76,14 @@
     position: static;
     height: auto;
     display: block;
-    padding: 8px 0 40vh; /* trailing space so the last card can un-stick */
+    padding: 8px 0 5vh; /* trailing space so the last card can un-stick */
   }
 
   .polaroid {
     position: sticky !important;
-    top: 96px !important; /* all cards stick at this same offset */
+    top: 96px !important; 
     left: 0 !important;
     width: clamp(240px, 80vw, 340px) !important;
-    margin: 0 auto 40vh; /* scroll distance before the next card arrives */
+    margin: 0 auto 3vh; 
   }
 }

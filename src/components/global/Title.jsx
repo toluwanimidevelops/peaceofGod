@@ -4,7 +4,7 @@ const Title = ({ subtext, mainText, breakedText, specialTextwithGradient, textCo
   return (
     <>
       {subtext && (
-        <p className="inline-flex min-h-9 mb-7 items-center justify-center rounded-full border border-[#c5d51a] bg-[#f0f5fc] px-4 py-2 text-xs leading-none text-[#1e1e1e]">
+        <p className="inline-flex font-secondary min-h-9 mb-7 items-center justify-center rounded-full border border-[#c5d51a] bg-[#f0f5fc] px-4 py-2 text-xs leading-none text-[#1e1e1e]">
           {subtext}
         </p>
       )}

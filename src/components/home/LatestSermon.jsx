@@ -8,9 +8,11 @@ const LatestSermon = () => {
           <p className="inline-flex min-h-9 w-fit mb-5 items-center justify-center rounded-full border border-[#c5d51a] bg-[#f0f5fc]/6 px-4 py-2 text-xs leading-none text-white">
             Missed Service
           </p>
-          <h1 className="uppercase  text-white font-main text-6xl max-lg:text-4xl max-md:text-4xl max-sm:text-4xl font-extrabold  ">
+          <h1 className="uppercase  text-white  text-6xl max-lg:text-4xl max-md:text-4xl max-sm:text-4xl font-extrabold  font-main">
             Catch up on <br /> our powerful <br />{" "}
-            <span className="bg-[#c5d51a] rounded-md text-[#1a699c] rotate-10 mt-5 block p-2 w-fit">SERMON</span>
+            <span className="bg-[#c5d51a] rounded-md text-[#1a699c] rotate-10 mt-5 block p-2 w-fit">
+              SERMON
+            </span>
           </h1>
         </div>
       </div>

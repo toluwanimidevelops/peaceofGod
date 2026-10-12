@@ -17,9 +17,9 @@ const Home = () => {
       <Events />
       <Testimony />
       <AplaceForYou />
-      {/* <div className="relative min-h-[50vh] max-w-full w-7xl  mx-auto"> */}
+      <div className="relative  max-w-full w-7xl  mx-auto">
         <PhotoCollage />
-      {/* </div> */}
+      </div>
     </div>
   );
 };

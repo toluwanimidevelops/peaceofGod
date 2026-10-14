@@ -70,7 +70,12 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
+.url {
+  background: linear-gradient(transparent,transparent, #101e6d), url(./assets/084.jpg);
 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media (max-width: 640px) {
   .collage {
     position: static;
@@ -81,9 +86,9 @@
 
   .polaroid {
     position: sticky !important;
-    top: 96px !important; 
+    top: 96px !important;
     left: 0 !important;
     width: clamp(240px, 80vw, 340px) !important;
-    margin: 0 auto 3vh; 
+    margin: 0 auto 3vh;
   }
 }

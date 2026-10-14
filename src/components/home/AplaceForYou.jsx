@@ -76,7 +76,7 @@ const AplaceForYou = () => {
           {...inView}
           variants={fadeUp}
           custom={0.5}
-          className="text-gray-100 max-w-3xl mx-auto md:text-[18px] mb-10 text-[14px] font-secondary font-extralight"
+          className="text-gray-100 max-w-3xl mx-auto md:text-[18px] mb-10 text-[14px] font-secondary font-extralight "
         >
           Come Experience an opportunity to connect with peers and cultivate{" "}
           whollesome and empowering relationships in a family of love

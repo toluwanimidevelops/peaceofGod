@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/giving" element={<Support />} />
       </Routes>
-      {/* <div className="h-50"/> */}
+      <div className="h-60"/>
       <Footer />
     </>
   );

@@ -142,6 +142,8 @@ export default function PhotoCollage({
   parallax = true,
   className = "",
 }) {
+  const isMobile = useIsMobile();
+
   return (
     <motion.div
       className={`collage ${className}`}
@@ -149,11 +151,11 @@ export default function PhotoCollage({
       data-nav-theme="light"
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.3 }} // fires once, when 30% is visible
+      // "some" = fire as soon as any part is visible; the tall stacked
+      // layout on mobile can never reach 30% on a small screen
+      viewport={{ once: true, amount: isMobile ? "some" : 0.3 }}
     >
       {photos.map((p, i) => (
-        // zIndex increases down the list so, once stacked/sticky on
-        // mobile, each new card overlaps on top of the ones before it.
         <Polaroid key={i} {...p} parallax={parallax} zIndex={i + 1} />
       ))}
     </motion.div>

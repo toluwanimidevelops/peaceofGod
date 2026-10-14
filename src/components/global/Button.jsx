@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Button = ({
   title,
   action,
@@ -6,13 +8,16 @@ const Button = ({
   icon,
 }) => {
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ type: "spring", stiffness: 400, damping: 20 }}
       onClick={action}
-      className={` w-fit ${textColor} flex items-center justify-center gap-2 ${bgColor}   font-secondary text-[15px] max-md:text-[14px] max-md:font-semibold max-lg:text-[16px] max-sm:text-[12px] font-semibold px-6 max-lg:px-6 max-md:px-5 max-sm:px-3 duration-700 cursor-pointer rounded-md py-3`}
+      className={`w-fit ${textColor} flex items-center justify-center gap-2 ${bgColor} font-secondary text-[13px] max-md:text-[14px] max-md:font-semibold max-lg:text-[16px] max-sm:text-[12px] font-semibold px-6 max-lg:px-6 max-md:px-5 max-sm:px-3 duration-700 cursor-pointer rounded-md py-3`}
     >
       {title}
       {icon && icon}
-    </button>
+    </motion.button>
   );
 };
 export const GeneralButton = ({
@@ -25,7 +30,7 @@ export const GeneralButton = ({
   return (
     <button
       onClick={action}
-      className={` w-fit ${textColor} flex items-center justify-center gap-2 ${bgColor}   font-secondary text-[15px] max-md:text-[12px] max-lg:text-[12px] font-normal max-sm:text-[12px]  px-7  duration-700 cursor-pointer rounded-sm py-2`}
+      className={` w-fit  flex items-center justify-center gap-2 ${bgColor}   font-secondary text-xs font-normal   px-5  duration-700 cursor-pointer rounded-sm py-2 ${textColor}`}
     >
       {title}
       {icon && icon}

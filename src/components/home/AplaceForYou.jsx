@@ -94,7 +94,7 @@ const AplaceForYou = () => {
               <h3 className="text-2xl max-md:text-xl max-sm:text-lg font-primary text-white font-semibold capitalize">
                 {box1.titleText}
               </h3>
-              <p className="text-white text-sm max-sm:text-xs font-secondary font-extralight">
+              <p className="text-white text-sm  font-secondary font-extralight">
                 {box1.content}
               </p>
             </div>
@@ -124,7 +124,7 @@ const AplaceForYou = () => {
               <h3 className="text-2xl text-[#1e1e1e] max-md:text-xl max-sm:text-lg font-primary font-semibold capitalize">
                 {circle1.titleText}
               </h3>
-              <p className="text-[#1e1e1e] text-sm max-sm:text-xs font-secondary font-extralight">
+              <p className="text-[#1e1e1e] text-sm  font-secondary font-extralight">
                 {circle1.content}
               </p>
             </div>
@@ -156,7 +156,7 @@ const AplaceForYou = () => {
               <h3 className="text-2xl text-[#1e1e1e] max-md:text-xl max-sm:text-lg font-primary font-semibold capitalize">
                 {circle2.titleText}
               </h3>
-              <p className="text-[#1e1e1e] text-sm max-sm:text-xs font-secondary font-extralight">
+              <p className="text-[#1e1e1e] text-sm  font-secondary font-extralight">
                 {circle2.content}
               </p>
             </div>
@@ -186,7 +186,7 @@ const AplaceForYou = () => {
               <h3 className="text-2xl max-md:text-xl max-sm:text-lg font-primary text-white font-semibold capitalize">
                 {box2.titleText}
               </h3>
-              <p className="text-white text-sm max-sm:text-xs font-secondary font-extralight">
+              <p className="text-white text-sm  font-secondary font-extralight">
                 {box2.content}
               </p>
             </div>

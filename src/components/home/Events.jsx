@@ -68,7 +68,7 @@ const Events = () => {
             {...inView}
             variants={fadeUp}
             custom={0.5}
-            className="max-w-sm text-center mx-auto"
+            className="max-w-md text-center mx-auto md:text-[18px] mb-10 text-black/90 mt-2 text-[14px] font-secondary font-extralight"
           >
             No upcoming events right now... Here is a look at our more recent
             gatherings.

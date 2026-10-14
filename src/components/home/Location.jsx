@@ -70,7 +70,7 @@ const Location = () => {
                 <h3 className="text-2xl max-md:text-lg tracking-tight text-[#1e1e1e] font-primary font-bold">
                   Physical Expressions
                 </h3>
-                <p className="max-w-sm max-md:text-sm mt-2 text-lg leading-5.5 text-black/70">
+                <p className="max-w-sm max-md:text-sm mt-2 font-secondary text-md leading-5.5 text-black/70">
                   Worship with us in person at one of our physical Expressions
                   (locations).
                 </p>
@@ -97,7 +97,7 @@ const Location = () => {
                   <h3 className="text-2xl max-md:text-lg tracking-tight text-white font-primary font-bold">
                     Watch Online
                   </h3>
-                  <p className="mt-5 max-md:text-sm text-lg leading-5.5 text-white">
+                  <p className="mt-5 max-md:text-sm text-md font-secondary leading-5.5 text-white">
                     Our online community who stream church from wherever they
                     are.
                   </p>
@@ -123,7 +123,7 @@ const Location = () => {
                   <h3 className="text-2xl max-md:text-lg tracking-tight text-white font-primary font-bold">
                     Become a Member
                   </h3>
-                  <p className="mt-5 max-md:text-sm text-lg leading-5.5 text-white">
+                  <p className="mt-5 max-md:text-sm text-md font-secondary leading-5.5 text-white">
                     We want to show you how you can become a vital part of the
                     vision.
                   </p>

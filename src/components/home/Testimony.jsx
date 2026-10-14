@@ -66,7 +66,7 @@ const Testimony = () => {
             {...inView}
             variants={fadeUp}
             custom={0.5}
-            className="max-w-120 max-md:w-full"
+            className="max-w-120 md:text-[16px] mb-5 text-black/90  text-[14px] font-secondary font-[200]  max-md:w-full"
           >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
             doloribus dolorem voluptatem odit a, autem est. A porro veniam,

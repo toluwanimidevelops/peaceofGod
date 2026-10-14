@@ -121,7 +121,7 @@ const Blogs = () => {
               {...inView}
               variants={fadeUp}
               custom={0.5}
-              className="max-w-2xl"
+              className="max-w-2xl md:text-[18px] mb-10 text-black/90 mt-2 text-[14px] font-secondary font-extralight"
             >
               Explore Stories Insights and inspiration from Peace of God
               Apostilic and Prophetic Ministry. Community

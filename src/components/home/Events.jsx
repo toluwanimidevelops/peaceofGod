@@ -11,7 +11,7 @@ const EventData = [
     title: "Bake Sale For Charity",
     description:
       "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta sunt explicabo rem reprehenderit tenetur quas omnis, sapiente veritatis ab necessitatibus debitis! In, commodi corporis eaque nisi minima voluptatem reiciendis?",
-    date: "Monday 20th October 2026",
+    date: "2026-12-15",
     time: "5:00pm",
     location: "Lagos Nigeria",
   },
@@ -21,7 +21,7 @@ const EventData = [
     title: "Bake Sale For Charity",
     description:
       "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta sunt explicabo rem reprehenderit tenetur quas omnis, sapiente veritatis ab necessitatibus debitis! In, commodi corporis eaque nisi minima voluptatem reiciendis?",
-    date: "Monday 20th October 2026",
+    date: "2026-12-15",
     time: "5:00pm",
     location: "Lagos Nigeria",
   },
@@ -31,7 +31,7 @@ const EventData = [
     title: "Bake Sale For Charity",
     description:
       "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta sunt explicabo rem reprehenderit tenetur quas omnis, sapiente veritatis ab necessitatibus debitis! In, commodi corporis eaque nisi minima voluptatem reiciendis?",
-    date: "Monday 20th October 2026",
+    date: "2026-12-15",
     time: "5:00pm",
     location: "Lagos Nigeria",
   },

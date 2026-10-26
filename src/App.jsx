@@ -9,6 +9,9 @@ import ContactUs from "./pages/ContactUs";
 import Support from "./pages/Support";
 import Nav from "./components/global/Nav";
 import Footer from "./components/global/Footer";
+import NotFound from "./pages/NotFound";
+import Events from "./pages/Events";
+import Blogs from "./pages/Blogs";
 
 const App = () => {
   return (
@@ -18,15 +21,16 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/activities" element={<OurActivities />} />
-
+        <Route path="/blogs" element={<Blogs/>}/>
         <Route path="/live-stream" element={<LiveStream />} />
         <Route path="/video-gallery" element={<Sermon />} />
-
+        <Route path="/event" element={<Events />} />
         <Route path="/our-gallery" element={<OurGallery />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/giving" element={<Support />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <div className="h-60"/>
+      <div className="h-60" />
       <Footer />
     </>
   );

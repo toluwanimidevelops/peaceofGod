@@ -1,10 +1,17 @@
 import Header from "../components/about/Header";
-import Section2 from "../components/about/section2";
+
+import About2 from "../components/about/about";
+import AplaceForYou from "../components/home/AplaceForYou";
+import AboutFounder from "../components/about/AboutFounder";
+import MissionandVision from "../components/about/MissionandVision";
 const About = () => {
   return (
     <div>
       <Header />
-      <Section2 />
+      <About2 />
+      <MissionandVision />
+      <AboutFounder />
+      <AplaceForYou />
     </div>
   );
 };

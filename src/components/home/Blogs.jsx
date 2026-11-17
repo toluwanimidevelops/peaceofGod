@@ -5,7 +5,6 @@ import data from "../../assets/data";
 import { MdArrowForward } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 
-
 const BlogData = [
   {
     id: 1,
@@ -16,7 +15,6 @@ const BlogData = [
       "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta sunt explicabo rem reprehenderit tenetur quas omnis, sapiente veritatis ab necessitatibus debitis! In, commodi corporis eaque nisi minima voluptatem reiciendis?",
     date: "Monday 20th October 2026",
     time: "5:00pm",
-    location: "Lagos Nigeria",
   },
   {
     id: 1,
@@ -27,7 +25,6 @@ const BlogData = [
       "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta sunt explicabo rem reprehenderit tenetur quas omnis, sapiente veritatis ab necessitatibus debitis! In, commodi corporis eaque nisi minima voluptatem reiciendis?",
     date: "Monday 20th October 2026",
     time: "5:00pm",
-    location: "Lagos Nigeria",
   },
   {
     id: 1,
@@ -38,7 +35,6 @@ const BlogData = [
       "  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta sunt explicabo rem reprehenderit tenetur quas omnis, sapiente veritatis ab necessitatibus debitis! In, commodi corporis eaque nisi minima voluptatem reiciendis?",
     date: "Monday 20th October 2026",
     time: "5:00pm",
-    location: "Lagos Nigeria",
   },
 ];
 
@@ -59,17 +55,13 @@ const inView = {
   viewport: { once: true, amount: 0.2 },
 };
 
-const BlogCard = ({ data, index = 0 }) => {
+export const BlogCard = ({ data, index = 0 }) => {
   return (
     <motion.div
       {...inView}
       variants={fadeUp}
       // delay resets every 3 cards so lower rows don't wait on upper ones
       custom={(index % 3) * 0.12}
-      whileHover={{
-        y: -8,
-        transition: { type: "spring", stiffness: 300, damping: 20 },
-      }}
       className="group w-full flex rounded-xl flex-col gap-10 justify-between cursor-pointer bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 p-3"
     >
       <div className="flex flex-col gap-3">
@@ -83,7 +75,7 @@ const BlogCard = ({ data, index = 0 }) => {
         </div>
 
         <div className="w-full justify-between items-start gap-20 text-[#1e1e1e]">
-          <p className="inline-flex mb-1 shrink-0 items-center justify-center rounded-full bg-[#f0f5fc] px-3 py-0.5 text-xs leading-none text-[#1e1e1e]/80">
+          <p className="inline-flex uppercase mb-1 shrink-0 items-center justify-center rounded-full bg-[#f0f5fc] px-3 py-1 text-xs leading-none text-[#1e1e1e]/80">
             {data.genre}
           </p>
           <h3 className="flex-1 max-sm:text-xl text-xl font-secondary font-semibold">
@@ -98,7 +90,7 @@ const BlogCard = ({ data, index = 0 }) => {
       </div>
 
       <Link
-        to={`/blog/${data.id}`}
+        to={`/blogs/${data.id}`}
         className="inline-flex items-center gap-1 w-fit text-sm font-secondary group-hover:text-[#101e6d] transition-colors duration-300"
       >
         Read More
@@ -139,7 +131,10 @@ const Blogs = () => {
               custom={0}
               className="col-span-1 lg:col-span-3 sm:col-span-2 md:col-span-2 flex justify-center items-center"
             >
-              <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
+              <motion.div
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+              >
                 <Button
                   action={() => navigate("/blogs")}
                   title={"View All Articles"}

@@ -39,12 +39,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Playwrite Display";
+  src: url("./assets/fonts/MomoSignature-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @import "tailwindcss";
 
 @theme {
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Poppins", sans-serif;
   --font-main: "Paytone One", sans-serif;
+  --font-special:"Playwrite Display", sans-serif;
   --color-colorprimary: "#101e6d";
   --color-secondary: "#c5d51a";
 }

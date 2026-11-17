@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaPlay } from "react-icons/fa";
 
 const API_KEY = import.meta.env.VITE_YT_API_KEY;
 const HANDLE = "peaceofgodministries";
@@ -9,7 +10,7 @@ const TTL = 10 * 60 * 1000;
 async function yt(path, params) {
   const url = new URL(`${BASE}/${path}`);
   Object.entries({ ...params, key: API_KEY }).forEach(([k, v]) =>
-    url.searchParams.set(k, v)
+    url.searchParams.set(k, v),
   );
   const res = await fetch(url);
   const data = await res.json();
@@ -94,7 +95,9 @@ const Sermon = () => {
         setVideos(data);
         setActive(data.find((v) => v.isLive) || data[0] || null);
       })
-      .catch(() => setError("Couldn't load sermons right now. Please try again."))
+      .catch(() =>
+        setError("Couldn't load sermons right now. Please try again."),
+      )
       .finally(() => setLoading(false));
   }, []);
 
@@ -105,15 +108,31 @@ const Sermon = () => {
   };
 
   if (loading)
-    return <p className="py-16 text-center text-gray-600">Loading sermons…</p>;
-  if (error) return <p className="py-16 text-center text-gray-600">{error}</p>;
+    return (
+      <p data-nav-theme="light" className="py-16 text-center text-gray-600">
+        Loading sermons…
+      </p>
+    );
+  if (error)
+    return (
+      <p data-nav-theme="light" className="py-16 text-center text-gray-600">
+        {error}
+      </p>
+    );
   if (!active)
-    return <p className="py-16 text-center text-gray-600">No sermons found.</p>;
+    return (
+      <p data-nav-theme="light" className="py-16 text-center text-gray-600">
+        No sermons found.
+      </p>
+    );
 
   const others = videos.filter((v) => v.id !== active.id);
 
   return (
-    <section data-nav-theme="light" className="mx-auto pt-30 grid  grid-cols-1 items-start gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)]">
+    <section
+      data-nav-theme="light"
+      className="mx-auto pt-30 grid  grid-cols-1 items-start gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)]"
+    >
       {/* BIG ACTIVE PLAYER */}
       <div>
         <div className="relative aspect-video overflow-hidden rounded-xl bg-black">
@@ -135,10 +154,10 @@ const Sermon = () => {
               ● LIVE NOW
             </span>
           )}
-          <h2 className="mb-1 mt-2 text-2xl font-semibold leading-snug">
+          <h2 className="mb-1 mt-2 text-2xl font-semibold font-primary leading-snug">
             {active.title}
           </h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm font-secondary text-gray-500">
             {formatDate(active.publishedAt)}
             {active.wasLivestream && !active.isLive && " · Live recording"}
           </p>
@@ -147,7 +166,7 @@ const Sermon = () => {
 
       {/* OTHER VIDEOS: 2-COLUMN GRID ON THE RIGHT */}
       <aside className="lg:sticky lg:top-4 lg:max-h-[85vh] lg:overflow-y-auto lg:pr-1.5">
-        <h3 className="mb-3 text-lg font-semibold">More Sermons</h3>
+        <h3 className="mb-3 text-lg font-semibold font-primary">More Sermons</h3>
 
         <div className="grid grid-cols-2 gap-3.5">
           {others.slice(0, visible).map((v) => (
@@ -164,26 +183,30 @@ const Sermon = () => {
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <span className="absolute inset-0 grid place-items-center bg-black/25 text-2xl text-white opacity-0 transition-opacity group-hover:opacity-100">
-                  ▶
+                  <div className="rounded-full bg-transparent flex items-center justify-center backdrop-blur-md p-4">
+                    <FaPlay />
+                  </div>
                 </span>
                 {v.isLive ? (
-                  <span className="absolute bottom-1.5 right-1.5 rounded bg-rose-600 px-1.5 py-0.5 text-[11px] text-white">
+                  <span className="absolute bottom-1.5 font-primary right-1.5 rounded bg-rose-600 px-1.5 py-0.5 text-[11px] text-white">
                     ● LIVE
                   </span>
                 ) : v.isUpcoming ? (
-                  <span className="absolute bottom-1.5 right-1.5 rounded bg-black/80 px-1.5 py-0.5 text-[11px] text-white">
+                  <span className="absolute bottom-1.5 font-primary right-1.5 rounded bg-black/80 px-1.5 py-0.5 text-[11px] text-white">
                     UPCOMING
                   </span>
                 ) : (
-                  <span className="absolute bottom-1.5 right-1.5 rounded bg-black/80 px-1.5 py-0.5 text-[11px] text-white">
+                  <span className="absolute bottom-1.5 font-primary right-1.5 rounded bg-black/80 px-1.5 py-0.5 text-[11px] text-white">
                     {formatDuration(v.duration)}
                   </span>
                 )}
               </div>
-              <h4 className="mt-2 line-clamp-2 text-sm font-medium leading-snug">
+              <h4 className="mt-2 line-clamp-2 text-sm font-primary  font-semibold leading-snug">
                 {v.title}
               </h4>
-              <p className="text-xs text-gray-500">{formatDate(v.publishedAt)}</p>
+              <p className="text-xs text-gray-500">
+                {formatDate(v.publishedAt)}
+              </p>
             </button>
           ))}
         </div>

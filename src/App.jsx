@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import Events from "./pages/Events";
 import Blogs from "./pages/Blogs";
 import BlogDetails from "./pages/BlogDetails";
+import EventDetails from "./pages/EventDetails";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/giving" element={<Support />} />
         <Route path="/blogs/:id" element={<BlogDetails/>}/>
+        <Route path="/events/:id" element={<EventDetails/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <div className="h-60" />

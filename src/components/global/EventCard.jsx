@@ -1,9 +1,10 @@
 import { CiClock1, CiLocationOn } from "react-icons/ci";
 import { FiCalendar } from "react-icons/fi";
 import moment from "moment"
+import { Link } from "react-router-dom";
 const EventCard = ({ data, isPresent }) => {
   return (
-    <div className="w-full h-full flex rounded-xl flex-col gap-10 justify-between hover:scale-99 cursor-pointer bg-white duration-300 shadow-xl p-3">
+    <div className="w-full h-full group flex rounded-xl flex-col gap-10 justify-between hover:scale-99 cursor-pointer bg-white duration-300 shadow-xl p-3">
       {/* Image Title and Description  */}
       <div className="flex flex-col gap-3">
         {/* Image */}
@@ -46,6 +47,9 @@ const EventCard = ({ data, isPresent }) => {
             <CiLocationOn strokeWidth={1} />
             {data.location}
           </p>
+          <Link to={`/events/${data.id}`} className="text-[#1e1e1e] font-secondary  text-sm bg-[#f0f5fc] px-3 py-1.5 rounded-md group-hover:bg-[#1a699c] group-hover:text-white duration-300">
+            Learn More
+          </Link>
         </div>
       </div>
     </div>
